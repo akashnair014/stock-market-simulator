@@ -10,23 +10,18 @@
     />
     <style>
       body {
-        background-color: #f8f9fa; /* Light gray background color */
+        background-color: #f8f9fa;
       }
 
       .navbar {
-        background: linear-gradient(to right, #09c6f9, #045de9);
+        background-color: #045de9;
       }
 
       .navbar-brand {
         font-weight: bold;
         font-size: 24px;
+        color: #ffffff;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      .navbar-nav .nav-link:hover {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      .navbar-nav .nav-link {
-        margin: 5px 0;
       }
 
       .navbar-toggler-icon {
@@ -37,17 +32,28 @@
         justify-content: flex-end;
       }
 
+      .navbar-nav .nav-link {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #f0a500;
+      }
+
       h1,
       h2 {
         color: #259aee;
       }
+
       footer {
-        background: linear-gradient(to right, #045de9, #09c6f9);
+        background-color: #045de9;
         color: #fff;
         padding: 20px 0;
       }
+
       footer a:hover {
-        color: #f8f9fa; /* Light gray color on hover */
+        color: #f8f9fa;
       }
 
       .team-list {
@@ -60,15 +66,16 @@
       }
 
       .team-member {
-        width: calc(25% - 20px);
+        width: 100%;
+        max-width: 250px;
         margin: 10px;
         text-align: center;
         padding: 15px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        transition: transform 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
       }
-
       .team-member:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -77,7 +84,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="#">Stock Market Simulator</a>
           <button
@@ -110,7 +117,6 @@
       </nav>
     </header>
 
-    <!-- Improved Welcome Section -->
     <section class="container my-5 text-center">
       <h1 class="mb-4">Welcome to the Stock Market Simulator</h1>
       <p class="lead">
@@ -123,7 +129,7 @@
     </section>
 
     <section class="container-fluid my-5 px-auto">
-      <div class="container-content text-center">
+      <div class="container text-center">
         <img
           src="images/st.png"
           alt="Stock Market Simulator"
